@@ -15,7 +15,7 @@
 
     <div class="container py-4">
 
-        <!-- Demostración 1: Saludar -->
+        <!-- DEMOSTRACIÓN 1: SALUDAR -->
         <div class="mb-4">
             <h2 class="fw-bold">Demostración 1: Saludar</h2>
 
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <!-- Demostración 2: Contador -->
+        <!-- DEMOSTRACIÓN 2: CONTADOR -->
         <div class="mb-4">
             <h2 class="fw-bold">Demostración 2: Contador</h2>
 
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <!-- Demostración 3: Texto simultáneo -->
+        <!-- DEMOSTRACIÓN 3: TEXTO SIMULTÁNEO -->
         <div class="mb-4">
             <h2 class="fw-bold">Demostración 3: Texto simultáneo</h2>
 
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <!-- Demostración 4: Cambiar color -->
+        <!-- DEMOSTRACIÓN 4: CAMBIAR COLOR -->
         <div class="mb-4">
             <h2 class="fw-bold">Demostración 4: Cambiar color</h2>
 
@@ -66,9 +66,9 @@
             </div>
         </div>
 
-        <!-- Demostración 5: Formulario e IMC -->
+        <!-- DEMOSTRACIÓN 5: FORMULARIO Y CÁLCULO DE IMC -->
         <div class="mb-4">
-            <h2 class="fw-bold">Demostración 6: Formulario y cálculo de IMC</h2>
+            <h2 class="fw-bold">Demostración 5: Formulario y cálculo de IMC</h2>
 
             <div class="col-8">
                 <form class="form form-control" id="form" action="">
@@ -83,8 +83,10 @@
                 </form>
             </div>
         </div>
+
+        <!-- DEMOSTRACIÓN 7: CONTRASEÑA -->
         <div class="mb-4">
-            <h2 class="fw-bold">Demostración 7: Contraseña</h2>
+            <h2 class="fw-bold">Demostración 6: Contraseña</h2>
 
             <div class="col-8">
                 <label for="">Ingrese su contraseña</label>
@@ -92,23 +94,91 @@
                 <p id="contraseña-text" class="mt-2"></p>
             </div>
         </div>
+
+        <!-- DEMOSTRACIÓN 8: LISTA DE MERCADO -->
         <div class="mb-4">
             <h2 class="fw-bold">Demostración 8: Lista de mercado</h2>
+
             <input class="form-control" id="item" type="text" placeholder="Ingrese un item">
             <button class="btn btn-primary mt-2" id="agregar">Agregar</button>
-        <ul id="lista" class="mt-2">
-        </ul>
 
-            
+            <ul id="lista" class="mt-2"></ul>
         </div>
 
-    </div>
+        <!-- DEMOSTRACIÓN 9: TARJETA DE PERFIL -->
+        <div class="mb-4">
+            <h2 class="fw-bold">Demostración 9: Tarjeta de perfil</h2>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IE0hGzo9y5Bp9mYanr8Bu"
-        crossorigin="anonymous"></script>
 
-    <script src="./index.js"></script>
+            <div class="card" style="width: 18rem;">
+
+                <form action="" id="formulario" class="form form-control">
+                    <label for="">Nombre</label>
+                    <input class="form-control" type="text" id="name" placeholder="Nombre">
+
+                    <label for="" class="mt-2">Correo</label>
+                    <input class="form-control" type="email" id="correo" placeholder="Correo">
+
+                    <label for="" class="mt-2">Edad</label>
+                    <input class="form-control" type="number" id="edad" placeholder="Edad">
+
+                    <button class="btn btn-primary mt-3" id="actualizar">Actualizar</button>
+
+                </form>
+                <div class="card-body">
+                    <p class="card-title" id="nombre-tarjeta">Nombre del Usuario:</p>
+                    <p class="card-text" id="correo-tarjeta">Correo: </p>
+                    <p class="card-text" id="edad-tarjeta">Edad: </p>
+                </div>
+            </div>
+
+            <!-- DEMOSTRACIÓN 10: SEMÁFORO INTERACTIVO -->
+            <div class="mb-4">
+                <h2 class="fw-bold">Demostración 10: Semáforo interactivo</h2>
+                <div id="rojo" class="rojo semaforo"></div>
+                <div id="amarillo" class="amarillo semaforo"></div>
+                <div id="verde" class="verde semaforo"></div>
+            </div>
+
+            <!--DEMOSTRACIÓN 11: Formulario de registro con validación-->
+            <div class="mb-5">
+                <form id="form-2" class="form form-control" action="">
+                    <label for="">Nombre</label>
+                    <input id="name2" type="text" class="form-control">
+                    <span class="" id="name-info"></span><br>
+                    
+                    <label for="">Correo</label>
+                    <input id="email" type="text" class="form-control">
+                    <span class="" id="email-info"></span><br>
+
+
+                    <label for="">Edad</label>
+                    <input id="age" type="number" class="form-control">
+                    <span class="" id="age-info"></span><br>
+
+                    <button type="submit" class="btn btn-primary mt-3">Registrarme</button>
+                </form>
+            </div>
+                <!--DEMOSTRACIÓN 12: Generador de tablas de multiplicar-->
+                <div class="mb-5">
+                    <form id="form-3" class="form form-control" action="">
+                        <label for="">Ingrese un número</label>
+                        <input id="number" type="number" class="form-control">
+                        <span class="" id="number-info"></span><br>
+
+                        <button type="submit" class="btn btn-primary mt-3">Generar tabla</button>
+                    </form>
+                    <div id="tablas" class="mt-3">
+                        <p class="form-text" id="contenido">Tabla de multiplicar:</p>
+                    </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IE0hGzo9y5Bp9mYanr8Bu"
+            crossorigin="anonymous"></script>
+
+        <script src="./index.js"></script>
 
 </body>
 
