@@ -294,12 +294,22 @@ let elementoContador = document.getElementById('contadorTareas')
 
 
 agregarTarea.addEventListener('click', () => {
-    contadorT++;
+        
+
     const tarea = document.getElementById('tarea').value;
     const prioridad = selectToDo.value;
 
-    listaTareas.innerHTML += `<li id="item" class="mt-4">${tarea},  Prioridad:  ${prioridad} <button onclick="marcar(this)" class="btn btn-success mx-3">Completada</button></li>`
-    elementoContador.textContent = `Total de tareas: ${contadorT}`
+    if (tarea === '') {
+        alert('Por favor, escribe una tarea');
+        return; // Detiene la ejecución aquí
+    } else {
+        contadorT ++;
+        listaTareas.innerHTML += `<li id="item" class="mt-4">${tarea},  Prioridad:  ${prioridad} <button onclick="marcar(this)" class="btn btn-success mx-3">Completada</button></li>`
+        elementoContador.textContent = `Total de tareas: ${contadorT}`
+        
+
+    }
+
 
 
 
