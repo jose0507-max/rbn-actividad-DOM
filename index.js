@@ -225,4 +225,92 @@ form3.addEventListener('submit', (e) => {
     for (let i = 1; i <= 10; i++) {
         tablaContainer.innerText += `\n${valor} * ${i} = ${valor * i}`;
     }
-}); 
+});
+
+
+// ==============================
+// EJERCICIO 13: Imágenes miniatura
+// ==============================
+
+const imgPrincipal = document.getElementById('principal');
+const img1 = document.getElementById('img-1');
+const img2 = document.getElementById('img-2');
+const img3 = document.getElementById('img-3');
+
+img1.addEventListener('click', () => {
+    const src = img1.src;
+    imgPrincipal.src = src;
+})
+
+img2.addEventListener('click', () => {
+    const src = img2.src;
+    imgPrincipal.src = src;
+})
+
+img3.addEventListener('click', () => {
+    const src = img3.src;
+    imgPrincipal.src = src;
+})
+
+// ==============================
+// EJERCICIO 14: Calculadora de presupuesto
+// ==============================
+
+const inicial = document.getElementById('inicial');
+const gastado = document.getElementById('gastado');
+const restante = document.getElementById('restante');
+const formP = document.getElementById('formPresupuesto');
+
+const listadoGastos = document.getElementById('gastos');
+let totalGastado = 0;
+let totalRestante = 0;
+formP.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const presupuesto = document.getElementById('presupuesto').value;
+    const cantidad = document.getElementById('cantidad');
+    const name = document.getElementById('nameExpense');
+
+    totalGastado += Number(cantidad.value);
+    console.log(totalRestante)
+    listadoGastos.innerHTML += `<li>Nombre del gasto: ${name.value}: Cantidad gastada $${cantidad.value}</li>`;
+    inicial.innerText = `Presupuesto inicial: $${presupuesto}`;
+    gastado.innerText = `Total Gastado: $${totalGastado}`;
+    restante.innerText = `Total restante: $${presupuesto - totalGastado}`;
+
+    if (presupuesto - totalGastado <= 0) {
+        restante.style.color = "red"
+    }
+})
+
+// ==============================
+// EJERCICIO 15: To Do list
+// ==============================
+
+const agregarTarea = document.getElementById('agregarTarea');
+const selectToDo = document.getElementById('selectToDo');
+const listaTareas = document.getElementById('listaTareas');
+let contadorT = 0;
+let elementoContador = document.getElementById('contadorTareas')
+
+
+agregarTarea.addEventListener('click', () => {
+    contadorT++;
+    const tarea = document.getElementById('tarea').value;
+    const prioridad = selectToDo.value;
+
+    listaTareas.innerHTML += `<li id="item" class="mt-4">${tarea},  Prioridad:  ${prioridad} <button onclick="marcar(this)" class="btn btn-success mx-3">Completada</button></li>`
+    elementoContador.textContent = `Total de tareas: ${contadorT}`
+
+
+
+})
+
+const marcar = (boton) => {
+    const item = boton.parentElement;
+    item.style.textDecoration = "line-through"
+    contadorT--;
+    if (contadorT <= 0) {
+        contadorT = 0;
+    }
+    elementoContador.textContent = `Total de tareas: ${contadorT}`
+}
